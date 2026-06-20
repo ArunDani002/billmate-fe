@@ -33,8 +33,17 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary text-primary-foreground text-2xl font-bold mb-4">B</div>
-          <h1 className="text-3xl font-bold text-gray-900">BillMate</h1>
-          <p className="text-muted-foreground mt-1">Smart invoicing for your business</p>
+          <h1 className="text-4xl font-bold tracking-tight">
+            BillMate
+          </h1>
+
+          <p className="text-muted-foreground mt-1">
+            Simple. Fast. Professional Billing.
+          </p>
+
+          <p className="text-xs text-muted-foreground mt-3">
+            A DAVerse Tech Product
+          </p>
         </div>
         <Card>
           <CardContent className="p-6">
@@ -55,11 +64,11 @@ export default function LoginPage() {
               Don't have an account?{" "}
               <Link href="/register" className="text-primary hover:underline font-medium">Register free</Link>
             </p>
-            <div className="text-xs text-muted-foreground text-center border-t pt-3 mt-4 space-y-1">
+            {/* <div className="text-xs text-muted-foreground text-center border-t pt-3 mt-4 space-y-1">
               <p className="font-medium">Demo credentials:</p>
               <p>Business: ravi@demo.com / demo123</p>
               <p>Admin: admin@billmate.app / admin123</p>
-            </div>
+            </div> */}
           </CardContent>
         </Card>
       </div>
