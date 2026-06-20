@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "BillMate SaaS"
+version = "1.0.0"
+id = "artifacts/billmate"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22933
+
+[services.development]
+run = "pnpm --filter @workspace/billmate run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/billmate", "run", "build" ]
+publicDir = "artifacts/billmate/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22933"
+BASE_PATH = "/"
